@@ -1,35 +1,36 @@
 List<Map<String, dynamic>> ariaBazarData = [
   {
-    'area': "Gulshan",
+    'area': "Dhaka North City Corporation",
     "market": [
-      "TownHall Bazar",
-      "Gulshan Bazar",
       "Karwan Bazar",
-      "KochuKhet Bazar",
-      "Rayer Bazar",
-      "Krishi Market"
+      "TownHall Bazar",
+      "Mohammadpur Krishi Market Bazar",
+      "Shyamoly Notun Kacha Bazar",
+      "Shyamoly Kazi Office Rayer",
+      "Rayer Rayer"
     ],
   },
   {
-    "area": "Mirpur-10",
+    "area": "Dhaka South City Corporation",
     "market": [
-      "TownHall Bazar",
+      "Chawkbazar Bazar",
       "Gulshan Bazar",
-      "Karwan Bazar",
+      "Lalbagh Bazar",
       "KochuKhet Bazar",
-      "Rayer Bazar",
-      "Krishi Market"
+      "Mugdapara Bazar",
+      "Malibagh Bazar",
+      "Manik Nagar Bazar",
+      "Azimpur Kacha Bazar"
     ],
   },
   {
-    "area": "Dhaka City",
+    "area": "Narayanganj City Corporation",
     "market": [
-      "TownHall Bazar",
-      "Gulshan Bazar",
-      "Karwan Bazar",
-      "KochuKhet Bazar",
-      "Rayer Bazar",
-      "Krishi Market"
+      "Kali er Bazar",
+      "Matlab Bazar",
+      "Sonargaon Bazar",
+      "Bou Bazar",
+      "Digu Babur Bazar"
     ],
   }
 ];

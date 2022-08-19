@@ -1,5 +1,13 @@
+import 'package:dam_dor/parent_screen.dart';
 import 'package:dam_dor/views/area/screens/select_area_screen.dart';
+import 'package:dam_dor/views/market/screens/market_list_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+
+import 'dart:async';
+
+import '../../../consts/AppAssets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,75 +18,53 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
+
+    Timer(
+      4.seconds,
+      () => Get.off(
+        () => const SelectArea(
+          title: 'Market Location',
+        ),
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(
-              'assets/images/splash.jpg',
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.black,
+      ),
+      alignment: Alignment.center,
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 9,
+            child: Container(
+              alignment: Alignment.center,
+              child: Image.asset(
+                AppAssets.logo,
+                width: 260,
+                height: 260,
+              ),
             ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: Text(
-                'Welcome to Dam Dor',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500),
-              ),
+          const Center(
+            child: CircularProgressIndicator(
+              backgroundColor: Colors.white,
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              child: Text(
-                "We promise that you'll have the most fuss-free time with us ever.",
-                style: TextStyle(
-                  color: Colors.white.withOpacity(.7),
-                  height: 1.4,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  primary: Colors.white,
-                  minimumSize: Size(double.infinity, 50),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SelectArea(),
-                    ),
-                  );
-                },
-                child: Text('Welcome to Dam Dor'),
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 80),
+        ],
       ),
     );
   }

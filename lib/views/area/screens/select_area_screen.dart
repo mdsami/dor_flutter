@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 
 class SelectArea extends StatefulWidget {
-  const SelectArea({Key? key}) : super(key: key);
+  const SelectArea({Key? key, required String title}) : super(key: key);
 
   @override
   State<SelectArea> createState() => _SelectAreaState();
