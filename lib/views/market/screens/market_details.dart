@@ -1,4 +1,4 @@
-import 'package:dam_dor/models/item_model.dart';
+import 'package:dam_dor/helper/item_data.dart';
 import 'package:flutter/material.dart';
 
 class MarketDetails extends StatefulWidget {
@@ -87,7 +87,10 @@ class _MarketDetailsState extends State<MarketDetails> {
                       child: Container(
                         padding: EdgeInsets.all(10),
                         margin: EdgeInsets.only(left: 10, top: 5),
-                        color: Color(0xff0e9f58),
+                        decoration:BoxDecoration(
+                          color: Color(0xff0e9f58),
+                          borderRadius: BorderRadius.circular(8)
+                        ),
                         child: Text(
                           itemData[index].itemName,
                           textAlign: TextAlign.center,
@@ -102,12 +105,16 @@ class _MarketDetailsState extends State<MarketDetails> {
                       child: Container(
                         padding: EdgeInsets.all(10),
                         margin: EdgeInsets.only(right: 10, top: 5),
-                        color: Color(0xff00aecf),
+                        decoration: BoxDecoration(
+                          color: Color(0xff00aecf),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                         child: Text(
                           itemData[index].itemPrice.toString(),
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
+
                       ),
                     ),
                   ],

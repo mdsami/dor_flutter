@@ -53,13 +53,18 @@ class _MarketListState extends State<MarketList> {
                   width: double.infinity,
                   height: size.height * 0.08,
                   color: Colors.green,
-                  child: Align(
-                    child: Text(
-                      widget.title,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Align(
+                      child: Text(
+                        widget.title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -112,13 +117,22 @@ class _MarketListState extends State<MarketList> {
                                 horizontal: 20, vertical: 5),
                             width: double.infinity,
                             height: size.height * 0.08,
-                            color: Colors.blue,
-                            child: Align(
-                              child: Text(
-                                market,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+
+                            decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(left:size.width*0.05,right: size.width*0.05),
+                              child: Align(
+                                child: Text(
+                                  market,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
                             ),

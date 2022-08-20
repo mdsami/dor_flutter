@@ -2,7 +2,6 @@ import 'package:dam_dor/models/json_model.dart';
 import 'package:dam_dor/views/market/screens/market_list_screen.dart';
 import 'package:flutter/material.dart';
 
-
 class SelectArea extends StatefulWidget {
   const SelectArea({Key? key, required String title}) : super(key: key);
 
@@ -56,17 +55,23 @@ class _SelectAreaState extends State<SelectArea> {
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Container(
                       height: size.height * 0.1,
+
                       margin: EdgeInsets.only(top: 10),
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.blue,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
                       ),
                       child: Align(
                         child: Text(
-                          ariaBazarData[index]['area'],style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 23,
-                        ),
+                          ariaBazarData[index]['area'],
+
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 23,
+                          ),
                         ),
                       ),
                     ),

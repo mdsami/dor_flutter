@@ -22,7 +22,7 @@ class _ParentScreenState extends State<ParentScreen> {
     color: Colors.white,
   );
 
-  
+
 
   static List<Widget> _widgetOptions = <Widget>[];
 
