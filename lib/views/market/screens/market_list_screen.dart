@@ -120,7 +120,7 @@ class _MarketListState extends State<MarketList> {
 
                             decoration: BoxDecoration(
                               color: Colors.blue,
-                              borderRadius: BorderRadius.circular(50),
+                              borderRadius: BorderRadius.circular(10),
                             ),
                             child: Padding(
                               padding: EdgeInsets.only(left:size.width*0.05,right: size.width*0.05),

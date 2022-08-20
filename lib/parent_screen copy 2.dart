@@ -1,10 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../../consts/AppAssets.dart';
+import '../../../constants/AppAssets.dart';
 
-import 'package:dam_dor/models/json_model.dart';
-import 'package:dam_dor/views/market/screens/market_details.dart';
 
 class ParentScreen extends StatefulWidget {
   final String title;
