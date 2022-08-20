@@ -36,6 +36,7 @@ dependencies:
   get: ^4.6.5
   flutter_launcher_icons: ^0.10.0
   font_awesome_flutter: ^10.1.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
