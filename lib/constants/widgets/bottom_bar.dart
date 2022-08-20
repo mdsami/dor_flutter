@@ -1,5 +1,5 @@
 import 'package:dam_dor/views/area/screens/select_area_screen.dart';
-import 'package:dam_dor/views/auth/login/screens/login_screen.dart';
+import 'package:dam_dor/views/auth/screens/login_screen.dart';
 import 'package:dam_dor/views/market/screens/market_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
