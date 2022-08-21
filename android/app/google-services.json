@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "274150339784",
+    "project_id": "dam-dor",
+    "storage_bucket": "dam-dor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274150339784:android:4b9b92a7e5d87b648d61fd",
+        "android_client_info": {
+          "package_name": "com.example.dam_dor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274150339784-0pgsd5c6o10rpu7tqc3op5o60t8q3cso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3h23At5KXTJqigbZZAJjntEug7sxYPLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274150339784-0pgsd5c6o10rpu7tqc3op5o60t8q3cso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,13 +1,8 @@
 import 'package:dam_dor/constants/widgets/bottom_bar.dart';
-import 'package:dam_dor/parent_screen.dart';
-import 'package:dam_dor/views/area/screens/select_area_screen.dart';
-import 'package:dam_dor/views/market/screens/market_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import 'dart:async';
-
 import '../../../constants/AppAssets.dart';
 
 class SplashScreen extends StatefulWidget {
