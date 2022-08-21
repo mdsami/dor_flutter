@@ -16,7 +16,7 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> pages = [
     SelectArea(title: 'Select Area'),
     Center(
-      child: Text('Bazar List Here!'),
+      child: Text('Bazar List Empty!'),
     ),
     Center(
       child: Text('Accounts Here!'),
