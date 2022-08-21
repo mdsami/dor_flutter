@@ -6,17 +6,17 @@ List<Map<String, dynamic>> ariaBazarData = [
       "TownHall Bazar",
       "Mohammadpur Krishi Market Bazar",
       "Shyamoly Notun Kacha Bazar",
-      "Shyamoly Kazi Office Rayer",
+      "Mirpur 2 Bazar",
       "Rayer Rayer"
+          "KochuKhet Bazar",
+      "Gulshan DCC Bazar",
     ],
   },
   {
     "area": "Dhaka South City Corporation",
     "market": [
-      "Chawkbazar Bazar",
-      "Gulshan Bazar",
+      "New Market Kacha Bazar",
       "Lalbagh Bazar",
-      "KochuKhet Bazar",
       "Mugdapara Bazar",
       "Malibagh Bazar",
       "Manik Nagar Bazar",
