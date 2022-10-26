@@ -2,9 +2,10 @@ import 'package:dam_dor/views/auth/screens/otp/widgets/otp_input.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class OTPScreen extends StatefulWidget {
   TextEditingController codeController = TextEditingController();
-  final VoidCallback onPress;
+  VoidCallback onPress;
 
   OTPScreen({
     Key? key,
@@ -60,10 +61,11 @@ class _OTPScreenState extends State<OTPScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 otpInput(
-                    codeController: widget.codeController,
-                    height: size.height * 0.06,
-                    width: size.width * 0.12,
-                    context: context),
+                  codeController: widget.codeController,
+                  height: size.height * 0.06,
+                  width: size.width * 0.12,
+                  context: context,
+                ),
                 otpInput(
                     codeController: widget.codeController,
                     height: size.height * 0.06,
