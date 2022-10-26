@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OTPScreen extends StatefulWidget {
-  const OTPScreen({Key? key}) : super(key: key);
+  TextEditingController codeController = TextEditingController();
+  final VoidCallback onPress;
+
+  OTPScreen({
+    Key? key,
+    required this.codeController,
+    required this.onPress,
+  }) : super(key: key);
 
   @override
   State<OTPScreen> createState() => _OTPScreenState();
@@ -53,33 +60,62 @@ class _OTPScreenState extends State<OTPScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 otpInput(
+                    codeController: widget.codeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
+                    codeController: widget.codeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
+                    codeController: widget.codeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
+                    codeController: widget.codeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
+                    codeController: widget.codeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
+                  codeController: widget.codeController,
                   height: size.height * 0.06,
                   width: size.width * 0.12,
                   context: context,
                 ),
               ],
             ),
-            Text('OTP sent to mobile number')
+            SizedBox(height: 20),
+            Text(
+              'OTP sent to mobile number',
+              style: GoogleFonts.raleway(
+                fontSize: 13,
+                color: Colors.red,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            SizedBox(height: 20),
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: Colors.white,
+                minimumSize: Size(
+                  size.width * 0.3,
+                  size.height * 0.05,
+                ),
+                backgroundColor: Color(
+                  0xff379c01,
+                ),
+              ),
+              onPressed: widget.onPress,
+              child: Text('Confirm'),
+            ),
           ],
         ),
       ),

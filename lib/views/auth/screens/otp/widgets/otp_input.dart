@@ -5,11 +5,13 @@ Widget otpInput({
   required double height,
   required double width,
   required BuildContext context,
+  required TextEditingController codeController,
 }) =>
     SizedBox(
       height: height,
       width: width,
       child: TextField(
+        controller: codeController,
         onChanged: (value) {
           if (value.length == 1) {
             FocusScope.of(context).nextFocus();
