@@ -1,3 +1,4 @@
+import 'package:dam_dor/views/auth/screens/otp/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -80,7 +81,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   size.height * 0.07,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OTPScreen(),
+                  ),
+                );
+              },
               child: Text(
                 'Login with OTP',
                 style: GoogleFonts.raleway(

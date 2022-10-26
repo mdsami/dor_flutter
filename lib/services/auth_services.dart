@@ -6,7 +6,11 @@ class AuthServices {
   AuthServices({
     required this.auth,
   });
+
   //phone sign in
 
+  Future<void> phoneSignIn() async {
 
+  }
+// phone sign in end
 }
