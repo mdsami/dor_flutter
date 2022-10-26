@@ -55,19 +55,17 @@ class _SelectAreaState extends State<SelectArea> {
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Container(
                       height: size.height * 0.1,
-
                       margin: EdgeInsets.only(top: 10),
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.all(
-                          Radius.circular(50),
+                          Radius.circular(10),
                         ),
                       ),
                       child: Align(
                         child: Text(
                           ariaBazarData[index]['area'],
-
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,

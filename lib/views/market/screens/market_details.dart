@@ -87,10 +87,9 @@ class _MarketDetailsState extends State<MarketDetails> {
                       child: Container(
                         padding: EdgeInsets.all(10),
                         margin: EdgeInsets.only(left: 10, top: 5),
-                        decoration:BoxDecoration(
-                          color: Color(0xff0e9f58),
-                          borderRadius: BorderRadius.circular(8)
-                        ),
+                        decoration: BoxDecoration(
+                            color: Color(0xff0e9f58),
+                            borderRadius: BorderRadius.circular(8)),
                         child: Text(
                           itemData[index].itemName,
                           textAlign: TextAlign.center,
@@ -110,11 +109,10 @@ class _MarketDetailsState extends State<MarketDetails> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text(
-                          itemData[index].itemPrice.toString(),
+                          '${itemData[index].itemPrice}Tk',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
-
                       ),
                     ),
                   ],

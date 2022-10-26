@@ -1,13 +1,9 @@
-import 'package:dam_dor/parent_screen.dart';
-import 'package:dam_dor/views/area/screens/select_area_screen.dart';
-import 'package:dam_dor/views/market/screens/market_list_screen.dart';
+import 'package:dam_dor/constants/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import 'dart:async';
-
-import '../../../consts/AppAssets.dart';
+import '../../../constants/AppAssets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -30,9 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       4.seconds,
       () => Get.off(
-        () => const SelectArea(
-          title: 'Market Location',
-        ),
+        () => const BottomBar(),
       ),
     );
   }
@@ -41,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Colors.black,
+        color: Colors.white,
       ),
       alignment: Alignment.center,
       child: Column(
