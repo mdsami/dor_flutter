@@ -2,7 +2,7 @@ name: dor RELEASE
 on: 
   push:
     branches:
-        - master
+        - main
 
 jobs:
   release:
