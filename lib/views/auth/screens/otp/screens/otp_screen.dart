@@ -4,12 +4,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class OTPScreen extends StatefulWidget {
-  TextEditingController codeController = TextEditingController();
+  TextEditingController firstCodeController = TextEditingController();
+  TextEditingController secondCodeController = TextEditingController();
+  TextEditingController thirdCodeController = TextEditingController();
+  TextEditingController fourthCodeController = TextEditingController();
+  TextEditingController fifthCodeController = TextEditingController();
+  TextEditingController sixthCodeController = TextEditingController();
   VoidCallback onPress;
 
   OTPScreen({
     Key? key,
-    required this.codeController,
+    required this.firstCodeController,
+    required this.secondCodeController,
+    required this.thirdCodeController,
+    required this.fourthCodeController,
+    required this.fifthCodeController,
+    required this.sixthCodeController,
     required this.onPress,
   }) : super(key: key);
 
@@ -18,6 +28,8 @@ class OTPScreen extends StatefulWidget {
 }
 
 class _OTPScreenState extends State<OTPScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -61,33 +73,33 @@ class _OTPScreenState extends State<OTPScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 otpInput(
-                  codeController: widget.codeController,
+                  codeController: widget.firstCodeController,
                   height: size.height * 0.06,
                   width: size.width * 0.12,
                   context: context,
                 ),
                 otpInput(
-                    codeController: widget.codeController,
+                    codeController: widget.secondCodeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
-                    codeController: widget.codeController,
+                    codeController: widget.thirdCodeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
-                    codeController: widget.codeController,
+                    codeController: widget.fourthCodeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
-                    codeController: widget.codeController,
+                    codeController: widget.fifthCodeController,
                     height: size.height * 0.06,
                     width: size.width * 0.12,
                     context: context),
                 otpInput(
-                  codeController: widget.codeController,
+                  codeController: widget.sixthCodeController,
                   height: size.height * 0.06,
                   width: size.width * 0.12,
                   context: context,

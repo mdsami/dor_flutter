@@ -14,6 +14,12 @@ class AuthServices {
   //phone sign in
 
   Future<void> phoneSignIn(String phoneNumber, BuildContext context) async {
+    TextEditingController firstCodeController = TextEditingController();
+    TextEditingController secondCodeController = TextEditingController();
+    TextEditingController thirdCodeController = TextEditingController();
+    TextEditingController fourthCodeController = TextEditingController();
+    TextEditingController fifthCodeController = TextEditingController();
+    TextEditingController sixthCodeController = TextEditingController();
     TextEditingController codeController = TextEditingController();
     try {
       await auth.verifyPhoneNumber(
@@ -32,12 +38,17 @@ class AuthServices {
               context,
               MaterialPageRoute(
                 builder: (context) => OTPScreen(
-                  codeController: codeController,
+                  firstCodeController: firstCodeController,
+                  secondCodeController: secondCodeController,
+                  thirdCodeController: thirdCodeController,
+                  fourthCodeController: fourthCodeController,
+                  fifthCodeController: fifthCodeController,
+                  sixthCodeController: sixthCodeController,
                   onPress: () async {
                     PhoneAuthCredential phoneAuthCredential =
                         PhoneAuthProvider.credential(
                             verificationId: verificationId,
-                            smsCode: codeController.text.trim());
+                            smsCode: firstCodeController.text.trim());
                     await auth.signInWithCredential(phoneAuthCredential);
                   },
                 ),
