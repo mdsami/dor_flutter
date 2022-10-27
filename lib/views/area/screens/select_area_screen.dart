@@ -3,6 +3,7 @@ import 'package:dam_dor/views/market/screens/market_list_screen.dart';
 import 'package:flutter/material.dart';
 
 class SelectArea extends StatefulWidget {
+
   const SelectArea({Key? key, required String title}) : super(key: key);
 
   @override

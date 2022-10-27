@@ -1,8 +1,8 @@
 import 'package:dam_dor/constants/widgets/showSnackBar.dart';
+import 'package:dam_dor/views/area/screens/select_area_screen.dart';
 import 'package:dam_dor/views/auth/screens/otp/screens/otp_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AuthServices {
   final FirebaseAuth auth;
@@ -26,6 +26,16 @@ class AuthServices {
           phoneNumber: phoneNumber,
           verificationCompleted: (PhoneAuthCredential credential) async {
             await auth.signInWithCredential(credential);
+            if (auth.currentUser != null) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SelectArea(
+                    title: 'Select Area',
+                  ),
+                ),
+              );
+            }
           },
           verificationFailed: (FirebaseAuthException e) {
             showSnackBar(
